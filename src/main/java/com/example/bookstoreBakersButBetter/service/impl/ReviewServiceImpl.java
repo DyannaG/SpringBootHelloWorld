@@ -22,7 +22,7 @@ public class ReviewServiceImpl implements ReviewService {
         Review temp = repo.findItemById(id);
         Review oldObj = repo.findItemById(id);
 
-        System.out.println(oldObj);
+        //System.out.println(oldObj);
 
         if (!temp.getSummary().equals(updated.getSummary())) {
             temp.setSummary(updated.getSummary());
@@ -36,10 +36,10 @@ public class ReviewServiceImpl implements ReviewService {
             temp.setRating(updated.getRating());
         }
 
-        temp.setDatePosted(updated.getDatePosted());
+      //  temp.setDatePosted(updated.getDatePosted());
 
         repo.save(temp);
-        System.out.println("Successfully updated " + oldObj + " to " + repo.findItemById(id).getSummary());
+        System.out.println("Successfully updated " + oldObj + " to " + repo.findItemById(id));
     }
 
     @Override
