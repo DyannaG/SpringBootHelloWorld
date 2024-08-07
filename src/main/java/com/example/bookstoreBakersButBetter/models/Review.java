@@ -25,7 +25,7 @@ public class Review {
 
     private Float rating;
     private String summary;
-    private LocalDateTime datePosted;
+   // private LocalDateTime datePosted;
 //    private Integer likes;
 //    private Integer dislikes;
     private String reviewTitle;
