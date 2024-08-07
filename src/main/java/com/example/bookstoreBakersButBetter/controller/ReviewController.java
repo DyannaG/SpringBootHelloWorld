@@ -20,7 +20,7 @@ public class ReviewController {
     @RequestMapping(value = "/editReview/{id}", method = RequestMethod.PUT)
 //    @RequestMapping
 //    @PutMapping("/editReview/{id}")
-    public User editReview(@RequestBody Review updated, @PathVariable String id) {
+    public Review editReview(@RequestBody Review updated, @PathVariable String id) {
         service.updateById(updated, id);
         return null;
     }

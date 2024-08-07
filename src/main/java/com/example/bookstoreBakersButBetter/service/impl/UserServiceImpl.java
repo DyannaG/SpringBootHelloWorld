@@ -30,4 +30,15 @@ public class UserServiceImpl implements UserService {
     public void delete(String id) {
         userRepository.deleteById(id);
     }
+
+    //review code so if this breaks its my fault - ella
+    @Override
+    public void addReview(String reviewId, String id) {
+
+        User obj = userRepository.findItemById(id);
+        System.out.println(obj);
+        obj.getReviewIds().add(reviewId);
+        userRepository.save(obj);
+        System.out.println(obj);
+    }
 }
