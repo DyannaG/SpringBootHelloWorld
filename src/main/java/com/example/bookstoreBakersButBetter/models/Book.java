@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.bookstoreBakersButBetter.models;
 
 import org.springframework.data.annotation.Id;
 
@@ -11,11 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
-    
+public class Book {
+
     @Id
     private String id;
     private String name;
-    private String email;
-
+    private String author;
+    private String genre;
+    private String publishDate;
 }

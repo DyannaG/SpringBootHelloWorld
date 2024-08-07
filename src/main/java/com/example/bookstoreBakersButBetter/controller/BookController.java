@@ -1,7 +1,8 @@
-package com.example.demo.controller;
+package com.example.bookstoreBakersButBetter.controller;
 
 import java.util.List;
 
+import com.example.bookstoreBakersButBetter.models.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,33 +11,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.User;
-import com.example.demo.service.UserService;
+import com.example.bookstoreBakersButBetter.models.Book;
+import com.example.bookstoreBakersButBetter.service.BookService;
 
 import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/users")
-public class UserController {
-    
+@RequestMapping("/books")
+public class BookController {
+
     @Autowired
-    private UserService userService;
-    
+    private BookService bookService;
+
     // @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     @GetMapping(value = "/findAll")
-    public List<User> getAllUsers() {
+    public List<Book> getAllBooks() {
         System.out.println("XXX - found");
-        return userService.findAll();
-    }
-    
-    @RequestMapping(value = "/createUser", method = RequestMethod.POST)
-    public User createUser(@RequestBody User user) {
-        return userService.save(user);
+        return bookService.findAll();
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-    public void deleteUser(@PathVariable String id) {
-        userService.delete(id);
+    @RequestMapping(value = "/createBook", method = RequestMethod.POST)
+    public Book createBook(@RequestBody Book book) {
+        return bookService.save(book);
     }
+
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    public void deleteBook(@PathVariable String id) {
+    bookService.delete(id);
 }
+}
+

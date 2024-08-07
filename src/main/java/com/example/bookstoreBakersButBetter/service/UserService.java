@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.bookstoreBakersButBetter.service;
 
 import java.util.List;
 
-import com.example.demo.models.User;
+import com.example.bookstoreBakersButBetter.models.User;
 
 public interface UserService {
 
