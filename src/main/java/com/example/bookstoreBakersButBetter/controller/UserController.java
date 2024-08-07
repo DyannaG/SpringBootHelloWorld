@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.bookstoreBakersButBetter.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.User;
-import com.example.demo.service.UserService;
+import com.example.bookstoreBakersButBetter.models.User;
+import com.example.bookstoreBakersButBetter.service.UserService;
 
 import lombok.AllArgsConstructor;
 

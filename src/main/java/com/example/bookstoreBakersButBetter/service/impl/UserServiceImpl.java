@@ -1,12 +1,12 @@
-package com.example.demo.service.impl;
+package com.example.bookstoreBakersButBetter.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.models.User;
-import com.example.demo.repository.UserRepository;
-import com.example.demo.service.UserService;
+import com.example.bookstoreBakersButBetter.models.User;
+import com.example.bookstoreBakersButBetter.repository.UserRepository;
+import com.example.bookstoreBakersButBetter.service.UserService;
 
 import lombok.AllArgsConstructor;
 

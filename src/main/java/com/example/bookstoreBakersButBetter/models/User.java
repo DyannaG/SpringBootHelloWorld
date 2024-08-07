@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.bookstoreBakersButBetter.models;
 
 import org.springframework.data.annotation.Id;
 
