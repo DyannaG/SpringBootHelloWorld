@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,5 +19,7 @@ public class User {
     private String id;
     private String name;
     private String email;
+    //review code so if this breaks its my fault - ella
+    private List<String> reviewIds;
 
 }

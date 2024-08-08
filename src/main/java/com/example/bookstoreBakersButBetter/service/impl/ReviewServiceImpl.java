@@ -8,8 +8,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Objects;
-
 @Service
 @AllArgsConstructor
 public class ReviewServiceImpl implements ReviewService {
@@ -46,4 +44,9 @@ public class ReviewServiceImpl implements ReviewService {
     public Review save(Review newReview) {
         return repo.save(newReview);
     }
+
+//    @Override
+//    public void addReview(String reviewId, String id, Object bookOrUser) {
+//
+//    }
 }

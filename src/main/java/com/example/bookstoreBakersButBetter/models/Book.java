@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,4 +21,6 @@ public class Book {
     private String author;
     private String genre;
     private String publishDate;
+    //review code so if this breaks its my fault - ella
+    private List<String> reviewIds;
 }

@@ -11,4 +11,6 @@ public interface UserService {
     User save(User user);
 
     void delete(String id);
+    //review code so if this breaks its my fault - ella
+    void addReview(String reviewId, String id);
 }
