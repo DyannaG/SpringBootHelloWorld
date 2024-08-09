@@ -34,17 +34,23 @@ public class ReviewServiceImpl implements ReviewService {
             temp.setRating(updated.getRating());
         }
 
-      //  temp.setDatePosted(updated.getDatePosted());
+     //   temp.setDatePosted(updated.getDatePosted());
 
         repo.save(temp);
         System.out.println("Successfully updated " + oldObj + " to " + repo.findItemById(id));
     }
 
+
+    @Override
+    public void delete(String id) {
+        repo.deleteById(id);
+    }
+
     @Override
     public Review save(Review newReview) {
         return repo.save(newReview);
+     //   return newReview;
     }
-
 //    @Override
 //    public void addReview(String reviewId, String id, Object bookOrUser) {
 //

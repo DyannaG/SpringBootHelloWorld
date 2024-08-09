@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-//@Document(collection = "Reviews")
+@Document(collection = "Reviews")
 
 public class Review {
     @Id
@@ -25,7 +25,7 @@ public class Review {
 
     private Float rating;
     private String summary;
-   // private LocalDateTime datePosted;
+//    private LocalDateTime datePosted;
 //    private Integer likes;
 //    private Integer dislikes;
     private String reviewTitle;

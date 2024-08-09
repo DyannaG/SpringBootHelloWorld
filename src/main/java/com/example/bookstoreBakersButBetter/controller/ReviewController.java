@@ -6,6 +6,7 @@ import com.example.bookstoreBakersButBetter.repository.ReviewRepository;
 import com.example.bookstoreBakersButBetter.service.ReviewService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,6 +24,17 @@ public class ReviewController {
     public Review editReview(@RequestBody Review updated, @PathVariable String id) {
         service.updateById(updated, id);
         return null;
+    }
+
+    @RequestMapping(value = "/delete/adminpass={adminpass}/{id}", method = RequestMethod.DELETE)
+    public void deleteReview(@PathVariable String adminpass, @PathVariable String id) {
+        if(adminpass.equals("bread1")) {
+            service.delete(id);
+            System.out.println("Deleted.");
+        }
+        else{
+            System.out.println("Invalid permissions.");
+        }
     }
 
 
